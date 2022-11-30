@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka One', cursive;
+}
+
+input, select, option, .mensaje{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    height: 25px;
+}
+.datoBusqueda{
+    width: 110px;
+}
+
+.mensaje{
+    display: inline-block;
+    margin-left: 50px;
+    font-size: medium;
+    color: rgb(187, 2, 2);
+}
+.regresar{
+    max-width: 30px;
+    cursor: pointer;
+}
+.logo{
+    width: 50px;
+    cursor: pointer;
+}
+.header{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.header h1{
+    font-size: large;
+}
+
+.formulario{
+    padding: 15px;
+    margin-top: 0;
+    border: 5px solid rgb(148, 228, 201);
+    border-radius: 20px;
+}
+
+.marketing{
+    width: 100%;
+    align-self: flex-start;
+}
+.publicidad{
+    margin-top: 20px;
+}
+
+.propietarioForm{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.busqueda{
+    max-width: 1200px;
+    margin: 10px auto;
+}
+.btngeneral{
+    background-color: rgb(148, 228, 201);
+    padding: 5px 15px;
+    height: 25px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+.btngeneral:hover{
+    background-color: rgb(109, 168, 149);
+}
+
+.contenedor{
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nombreCompleto{
+    width: 100%;
+}
+
+.datos{
+    width: 100%;
+}
+
+.direccion{
+    width: 100%;
+}
+.etiqueta{
+    display: block;
+}
+.entrada, .publicidad{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.datosTel {
+    display: flex;
+    justify-content: space-between;
+}
+.telefono-acomodar{
+    margin-right: 15px;
+}
+.datosTel, .correo {
+    width: 100%;
+}
+
+@media (min-width:700px) {
+
+    .logo{
+        width: 100px;
+    }
+    .regresar{
+        width: 40px;
+    }
+    .header h1{
+        font-size: xx-large;
+    }
+    .nombreCompleto{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    .nombre, .apellidoPat, .apellidoMat{
+        width: 32%;
+    }
+    .dirData{
+        width: 32%;
+    }
+    .datosDir{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .publicidad{
+        width: 45%;
+    }
+
+    .datTel{
+        width: 46%;
+    }
+    
+}

@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka One', cursive;
+}
+input, select, option{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    height: 25px;
+}
+.logo{
+    width: 50px;
+}
+.header{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.header h1{
+    font-size: large;
+}
+.boton{
+    background-color: rgb(148, 228, 201);
+    border-radius: 10px 10px 0 0;
+    border: none;
+    height: 30px;
+    margin-left: 5%;
+}
+.btngeneral{
+    background-color: rgb(148, 228, 201);
+    padding: 5px 15px;
+    height: 25px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    min-width: 200px;
+    margin: 10px auto 0;
+}
+.btngeneral:hover{
+    background-color: rgb(109, 168, 149);
+}
+
+.controles, .formulario{
+    max-width: 1500px;
+    margin: 20px auto 0;
+
+}
+.formulario{
+    padding: 15px;
+    margin-top: 0;
+    border: 5px solid rgb(148, 228, 201);
+    border-radius: 20px;
+}
+
+.contenedorPaciente{
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.etiqueta{
+    display: block;
+}
+.entrada, .publicidad{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.segundaDivision .uno .etiqueta{
+    font-size: 15px;
+}
+.primeraDivision, .segundaDivision{
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+}
+.terceraDivision{
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.uno label, .uno select,.dos input, .dos label{
+    width: 90%;
+}
+.uno, .dos, .color, .esterilizado{
+    width: 100%;
+}
+.direccion{
+    width: 100%;
+    max-width: 700px;
+}
+.terceraDivision input, .esterilizado select{
+    width: 90%;
+}
+.doctor{
+    display: inline-block;
+}
+.cedula{
+    margin-left: 20px;
+    display: inline-block;
+}
+.mensajeError{
+    text-align: center;
+    color: rgb(145, 6, 6);
+    font-size: larger;
+    display: none;
+}
+.falta{
+    border: 2px solid red;
+}
+
+.nReg{
+    margin-bottom: 20px;
+}
+.nReg #optReg{
+    width: 40%;
+}
+.nReg #optReg{
+    width: 40%;
+}
+.nReg .numReg{
+    width: 58%;
+}
+
+@media (min-width: 350px) {
+    .cedula input{
+        width: 130px;
+    }   
+    .nReg #optReg{
+        width: auto;
+    }
+    .nReg .numReg{
+        width: 235px;
+    }
+}
+@media (min-width:700px) {
+
+    .logo{
+        width: 100px;
+    }
+    .header h1{
+        font-size: xx-large;
+    }
+
+}

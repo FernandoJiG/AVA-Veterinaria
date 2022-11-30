@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka One', cursive;
+}
+:root{
+    --color-principal: rgb(148, 228, 201);
+    --color-hovers: rgb(109, 168, 149);
+}
+
+input, select, option{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    height: 25px;
+}
+.regresar{
+    max-width: 30px;
+    cursor: pointer;
+}
+.logo{
+    width: 50px;
+}
+.header{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.header h1{
+    font-size: large;
+}
+.controles{
+    display: flex;
+    justify-content: space-between;
+}
+.controles .navegar{
+    margin-left: 20px;
+    display: flex;
+}
+.buscarPrevio{
+    display: flex;
+    align-items: center;
+    
+}
+.idPrevio{
+    width: 80px;
+    margin-left: 5px;
+
+}
+.btngeneral.btnbuscar{
+    padding: 0;
+    margin-left: 5px;
+
+}
+.controles, .formulario{
+    max-width: 1500px;
+    margin: 20px auto 0;
+
+}
+.previo{
+    display: none;
+}
+.boton.espacio{
+    margin-left: 5%;
+    background-color: var(--color-principal);
+}
+.boton{
+    background-color: var(--color-hovers);
+    border-radius: 10px 10px 0 0;
+    border: none;
+    cursor: pointer;
+    height: 30px;
+}
+.boton:hover{
+    background-color: var(--color-hovers);
+}
+
+.btngeneral{
+    background-color: var(--color-principal);
+    padding: 5px 15px;
+    height: 25px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+.btngeneral:hover{
+    background-color: var(--color-hovers);
+}
+
+.contenedorPaciente .btngeneral{
+    min-width: 200px;
+    margin: 10px auto 0;
+}
+.formulario{
+    padding: 15px;
+    margin-top: 0;
+    border: 5px solid var(--color-principal);
+    border-radius: 20px;
+}
+
+
+/*Formulario Propietario*/
+.propietarioForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedor{
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nombreCompleto{
+    width: 100%;
+}
+
+.datosTel, .correo{
+    width: 100%;
+}
+.marketing{
+    width: 100%;
+    align-self: flex-start;
+}
+.publicidad{
+    margin-top: 20px;
+}
+
+
+/*Ambos Formularios*/
+.etiqueta{
+    display: block;
+}
+.entrada, .publicidad{
+    width: 100%;
+    margin-bottom: 20px;
+}
+/*--------------*/
+
+/*Formulario Paciente*/
+.contenedorPaciente{
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.segundaDivision .uno .etiqueta{
+    font-size: 15px;
+}
+.primeraDivision, .segundaDivision{
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+}
+.terceraDivision{
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.uno label, .uno select,.dos input, .dos label{
+    width: 90%;
+}
+.uno, .dos, .color, .esterilizado{
+    width: 100%;
+}
+.direccion{
+    width: 100%;
+}
+.terceraDivision input, .esterilizado select{
+    width: 90%;
+}
+
+.nReg{
+    margin-bottom: 20px;
+}
+.nReg #optReg{
+    width: 40%;
+}
+.nReg #optReg{
+    width: 40%;
+}
+.nReg .numReg{
+    width: 58%;
+}
+
+.doctor{
+    display: inline-block;
+}
+.cedula{
+    margin-left: 20px;
+    display: inline-block;
+}
+.mensajeError{
+    text-align: center;
+    color: rgb(145, 6, 6);
+    font-size: larger;
+    display: none;
+}
+.falta{
+    border: 2px solid red;
+}
+
+
+
+.invisible{
+    display: none;
+}
+
+#MotivVisita{
+    min-width: 95%;
+}
+
+@media (min-width: 430px){
+    .idPrevio{
+        width: 140px;
+    }
+    .btngeneral.btnbuscar{
+        width: 100px;
+    }
+    .nReg #optReg{
+        width: auto;
+    }
+    .nReg .numReg{
+        width: 235px;
+    }
+}
+
+@media (max-width: 350px) {
+    .cedula input{
+        width: 130px;
+    }
+}
+@media (min-width: 600px){
+    .previo{
+        display: inline;
+    }
+}
+
+@media (min-width:700px) {
+
+    .logo{
+        width: 100px;
+    }
+    .regresar{
+        width: 40px;
+    }
+    .header h1{
+        font-size: xx-large;
+    }
+    .nombreCompleto{
+        display: flex;
+        justify-content: space-between;
+    }
+    .nombre, .apellidoPat, .apellidoMat{
+        width: 32%;
+    }
+    .datosTel{
+        display: flex;
+        justify-content: space-between;
+    }
+    .datTel{
+        width: 46%;
+    }
+
+    .dirData{
+        width: 32%;
+    }
+    .datosDir{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .publicidad{
+        width: 45%;
+    }
+}

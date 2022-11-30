@@ -1,0 +1,653 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka One', cursive;
+}
+:root{
+    --color-principal:rgb(148, 228, 201);
+    --color-hovers: rgb(109, 168, 149);
+}
+.icono{
+    width: 20px;
+}
+.regresar{
+    width: 40px;
+    cursor: pointer;
+}
+.logo{
+    width: 50px;
+    cursor: pointer;
+}
+
+.encabezado{
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+    justify-content: space-between;
+}
+.Primera-Info{
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto;
+}
+.navegar{
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-left: 40px;
+}
+.boton.espacio{
+    background-color: var(--color-principal);
+}
+.boton{
+    background-color: var(--color-hovers);
+    border-radius: 10px 10px 0 0;
+    border: none;
+    cursor: pointer;
+    height: 30px;
+    padding: 0 20px;
+}
+.btnAgregar{
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgb(75, 190, 243);
+    background-color: rgb(116, 201, 241);
+    border-radius: 40%;
+    margin: 10px 10px 10px 0;
+    float: right;
+    font-size: 20px;
+
+    display: block;
+}
+
+.fecha, .expediente{
+    border: none;
+    border-bottom: solid 2px;
+    width: 90%;
+}
+
+.cuerpoExpediente{
+    max-width: 1600px;
+    margin: 0 auto;
+    padding:20px 0 30px;
+    /* height: 2500px;Inicial fue 1500 * 30 rows */
+    border: 2px solid var(--color-principal);
+    border-radius: 20px;
+
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(17, 1fr);
+    grid-template-rows: auto;
+}
+
+.ocultarHoja{
+    display: none;
+}
+/*Css de datos primarios de la mascota*/
+.datos-mascota{
+    grid-column: 6/12;
+    grid-row: 1/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80px;
+}
+/*-------------------------------*/
+
+/*Css del cuadro de datos del propietario*/
+.datos-propietario{
+    grid-column: 12/18;
+    grid-row: 1/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 160px;
+}
+/*-------------------------------*/
+
+/*Css de datos especificos de la mascota*/
+.datos-especificos{
+    grid-column: 1/18;
+    grid-row: 3/4;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/*-------------------------------*/
+
+/*Css text Area del motivo*/
+.motivo{
+    grid-column: 4/15;
+    grid-row: 4;
+    padding-top: 20px;
+}
+/*-------------------------------*/
+
+/*Css de MedPrev y tabla*/
+.medPrev{
+    grid-column: 1/9;
+    grid-row: 5;
+    margin-top: 20px;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    height: 30px;
+}
+table{
+    width: 100%;
+}
+.subDato{
+    width: 50px;
+}
+/*-------------------------------*/
+
+/*Css Del bloque datosPrev*/
+.datosPrev{
+    grid-column: 9/18;
+    grid-row: 5;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 500px;
+}
+
+
+.tiempoMasc{
+    display: flex;
+}
+
+.plantas, .plantasDatos{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+/*-------------------------------*/
+
+/*Css para dieta*/
+.datos-dieta{
+    grid-column: 9/18;
+    grid-row: 6;
+}
+.tituloDiet{
+    text-align: center;
+    background-color: rgb(208, 171, 241);
+    line-height: 20px;
+}
+.cantidades{
+    display: flex;
+}
+.dietaOpcion{
+    display: flex;
+    margin-top: 10px;
+}
+/*-------------------------------*/
+
+/*Clases para div's que comparten espacio con un div más*/
+.div-width-completo{
+    width: 100%;
+}
+.div-width-compartido{
+    width: 50%;
+}
+.div-width-compartido-tres{
+    width: 33%;
+}
+.input-width-compartido{
+    width: 90%;
+}
+.input-width-completo{
+    width: 100%;
+}
+/*-------------------------------*/
+
+/*CSS para sistema*/
+.datos-sistema{
+    grid-column: 1/9;
+    grid-row: 6;
+}
+.tituloSistema{
+    text-align: center;
+    background-color: rgb(218, 132, 147);
+}
+.contentSist{
+    max-height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+/*-------------------------------*/
+
+/*CSS para musculoesqueletico*/
+.datos-musculoEsque{
+    grid-column: 1/18;
+    grid-row: 7;
+    max-width: 100%;
+}
+.tituloMusculoEsque{
+    text-align: center;
+    background-color: rgb(127, 241, 127);
+    line-height: 30px;
+}
+.infoMusculoEsque{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#txtarea-MuscEsque{
+    width: 40%;
+}
+
+/*-------------------------------*/
+
+/*CSS para sistRespi*/
+.datos-sistRespi{
+    grid-column: 1/18;
+    grid-row: 8;
+}
+.tituloSistRespi{
+    text-align: center;
+    background-color: rgb(156, 219, 248);
+    line-height: 30px;
+}
+.contentSistRespi{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+/*CSS para cardVasc*/
+.datos-cardVasc{
+    grid-column: 1/18;
+    grid-row: 9;
+}
+.tituloCardVasc{
+    text-align: center;
+    background-color: rgb(241, 90, 115);
+    line-height: 30px;
+}
+.contentCardVasc{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+/*--------------------------------*/
+
+/*CSS para GastrEnterico*/
+.datos-GastrEnterico{
+    grid-column: 1/18;
+    grid-row: 10;
+}
+.tituloGastrEnterico{
+    text-align: center;
+    background-color: rgb(255, 198, 92);
+    line-height: 30px;
+}
+.contentGastrEnterico{
+    display: flex;
+}
+.sintomsGastro{
+    display: flex;
+}
+.gastroSeg{
+    display: flex;
+}
+/*--------------------------------*/
+
+/*CSS para genUrin*/
+.tituloGenUrin{
+    grid-column: 1/18;
+    grid-row: 11;
+    text-align: center;
+    background-color: pink;
+    line-height: 30px;
+    height: 30px;
+}
+.datos-genUrin-uno{
+    grid-column: 1/9;
+    grid-row: 12;
+}
+.elementoInterno{
+    display: flex;
+    justify-content: space-between;
+}
+.division{
+    display: flex;
+}
+.datos-genUrin-dos{
+    grid-column: 10/18;
+    grid-row: 12;
+}
+
+/*--------------------------------*/
+
+/*CSS para sistNerv*/
+.datos-sistNerv{
+    grid-column: 1/18;
+    grid-row: 13;
+}
+.tituloSistNerv{
+    text-align: center;
+    background-color: rgb(168, 168, 168);
+    line-height: 30px;
+}
+.primeroSistNerv{
+    width: 30%;
+}
+.segundoSistNerv{
+    width: 70%;
+    margin-left: 10px;
+}
+.divSistNerv{
+    display: flex;
+}
+.tdAlignment{
+    text-align: center;
+}
+/*--------------------------------*/
+
+/*CSS para ojo*/
+.datos-ojo{
+    grid-column: 1/9;
+    grid-row: 14;
+}
+.tituloOjo{
+    text-align: center;
+    background-color: rgb(137, 176, 226);
+    line-height: 30px;
+}
+/*--------------------------------*/
+
+/*CSS ´para oido*/
+.datos-oido{
+    grid-column: 9/18;
+    grid-row: 14;
+}
+.tituloOido{
+    text-align: center;
+    background-color: rgb(243, 243, 120);
+    line-height: 30px;
+}
+/*--------------------------------*/
+
+/*CSS otroDato*/
+.datos-otro{
+    grid-column: 1/18;
+    grid-row: 15;
+}
+.tituloOtro{
+    background-color: rgb(145, 145, 235);
+    line-height: 30px;
+    text-align: center;
+}
+/*--------------------------------*/
+
+
+/*HOJA2*/
+/*CSS para examFisi*/
+.datos-examFisi{
+    grid-column: 1/18;
+    grid-row: 1;
+}
+.tituloExamFisi{
+    text-align: center;
+    background-color: rgb(219, 211, 211);
+    line-height: 30px;
+}
+.tablasWidth{
+    width: 50%;
+}
+.inputWidth{
+    width: 90%;
+}
+.tablasExamFisi{
+    display: flex;
+}
+/*---------------------------------*/
+/*CSS para facPred*/
+.datos-factPred{
+    grid-column: 1/18;
+    grid-row: 2;
+}
+.tituloFactPred{
+    text-align: center;
+    background-color: rgb(247, 210, 141);
+    line-height: 30px;
+}
+
+.partesFactPred{
+    display: flex;
+}
+.primeroFactPred{
+    width: 32%;
+}
+.segFactPred{
+    width: 30%;
+}
+.tercerFactPred{
+    width: 38%;
+}
+.cuartoFactPred{
+    display: flex;
+    justify-content: space-between;
+}
+.confirmaOri, .signos{
+    display: flex;
+}
+/*---------------------------------*/
+/*CSS para planDiag*/
+.datos-planDiag{
+    grid-column: 1/18;
+    grid-row: 3;
+    display: flex;
+    margin-top: 20px;
+}
+.tablaEncabezado{
+    background-color: rgb(224, 194, 224);
+}
+.tablPlanDiag{
+    width: 130%;
+}
+.tablaOtros{
+    width: 80%;
+}
+/*---------------------------------*/
+/*CSS para planTera*/
+.datos-planTera{
+    grid-column: 1/18;
+    grid-row: 4;
+}
+.tituloPlanTera{
+    text-align: center;
+    background-color: rgb(201, 159, 240);
+    line-height: 30px;
+}
+/*---------------------------------*/
+/*CSS para proxCita*/
+.datos-proxCita{
+    grid-column: 1/18;
+    grid-row: 5;
+}
+.tituloProxCita{
+    text-align: center;
+    background-color: rgb(143, 248, 234);
+    line-height: 30px;
+}
+.fechaProxCita{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+/*---------------------------------*/
+/*---------------------------------*/
+
+@media (max-width:970px) {
+    .plantasCambios{
+        width: 70%;
+    }
+
+    /*HOJA 2*/
+    .tablasExamFisi{
+        flex-direction: column;
+    }
+    .tablasExamFisi .div-width-compartido, .plantasDatos{/*plantasDatos es de la primera hoja*/
+        width: 100%;
+    }
+    /*--------------------*/
+}
+
+@media (max-width:790px) {
+    .datos-propietario{
+        grid-column: 1/18;
+        grid-row: 1;
+    }
+    .datos-mascota{
+        grid-column: 1/18;
+        grid-row: 2;
+        flex-direction: row;
+
+    }
+    .datos-especificos{
+        grid-row: 3;
+    }
+    .motivo{
+        grid-row: 4;
+        padding-top: 5px;
+    }
+    .medPrev{
+        grid-column: 1/18;
+        grid-row: 5;
+    }
+    /*Datos Prev Form*/
+    .datosPrev{
+        grid-column: 1/18;
+        grid-row: 6;    
+    }
+    .espacioForm{
+        margin-bottom: 8px;
+    }
+    /*---------*/
+    .datos-dieta{
+        grid-column: 1/18;
+        grid-row: 8;
+    }
+    .datos-sistema{
+        grid-column: 1/18;
+        grid-row: 7;
+    }
+    .datos-musculoEsque{
+        grid-column: 1/18;
+        grid-row: 9;
+    }
+
+    .datos-sistRespi{
+        grid-column: 1/18;
+        grid-row: 10;
+    }
+    .txtDuracTip{
+        width: 100%;
+    }
+
+    .datos-cardVasc{
+        grid-column: 1/18;
+        grid-row: 11;
+    }
+    /*GastrEnterico*/
+    .datos-GastrEnterico{
+        grid-column: 1/18;
+        grid-row: 12;
+    }
+    .contentGastrEnterico{
+        flex-direction: column;
+    }
+    .divisionGastr{
+        width: 100%;
+    }
+    /*------------------------*/
+    /*GenitoUrinario*/
+    .tituloGenUrin{
+        grid-column: 1/18;
+        grid-row: 13;
+    }
+    .datos-genUrin-uno{
+        grid-column: 1/18;
+        grid-row: 14;
+    }
+    .datos-genUrin-dos{
+        grid-column: 1/18;
+        grid-row: 15;
+    }
+    /*--------------------*/
+    .datos-sistNerv{
+        grid-column: 1/18;
+        grid-row: 16;
+    }
+    .datos-ojo{
+        grid-column: 1/18;
+        grid-row: 17;
+    }
+    .datos-oido{
+        grid-column: 1/18;
+        grid-row: 18;
+    }
+
+    .datos-otro{
+        grid-column: 1/18;
+        grid-row: 19;
+    }
+    /*HOJA 2*/
+    .partesFactPred{
+        flex-wrap: wrap;
+    }
+    .primeroFactPred{
+        width: 50%;
+    }
+    .segFactPred{
+        width: 50%;
+    }
+    .tercerFactPred{
+        width: 100%;
+    }
+    .cuartoFactPred{
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .datos-planDiag{
+        flex-direction: column;
+    }
+    .tablPlanDiag{
+        width: 100%;
+    }
+    #tablaPlanDiag td{
+        font-size: 12px;
+    }
+    .tablaOtros{
+        width: 100%;
+    }
+    /*--------------------*/
+}
+@media (max-width:557px){
+    .continuaSistema{
+        width: 100%;
+    }
+    #txtarea-MuscEsque{
+        width: 100%;
+    }
+    .divSistNerv{
+        flex-direction: column;
+    }
+    .primeroSistNerv, .segundoSistNerv{
+        width: 100%;
+    }
+    /*HOJA 2*/
+    .signos div p, .confirmaOri div label{
+        font-size: 12px;
+    }
+    .datosPrev{
+        max-height: fit-content;
+    }
+}
